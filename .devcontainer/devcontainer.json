@@ -28,7 +28,8 @@
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode",
         "GitHub.vscode-pull-request-github",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "Postman.postman-for-vscode"
       ],
       // Please keep this file in sync with settings in home-assistant/.vscode/settings.default.json
       "settings": {
@@ -64,7 +65,15 @@
             "fileMatch": ["homeassistant/components/*/manifest.json"],
             "url": "./script/json_schemas/manifest_schema.json"
           }
-        ]
+        ],
+        "files.exclude": {
+          "./config": true,
+          "./config/.cloud/": true,
+          "./config/.storage/": true,
+          "./config/blueprints/": true,
+          "./config/deps/": true,
+          "./config/tts/": true
+        }
       }
     }
   }
